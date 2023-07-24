@@ -1,0 +1,22 @@
+{
+  "name": "nodeappone",
+  "version": "1.0.0",
+  "description": "werken met package.json en package-lock.json",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [
+    "maurice",
+    "packages",
+    "test"
+  ],
+  "author": "Maurice Schmitz",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0"
+  }
+}
