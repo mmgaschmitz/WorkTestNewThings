@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 // Validator Koppelen
 // builder.Services.AddScoped<IValidator<PersonFluent>, PersonFluentValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<PersonFluentValidator>();  // depenency Injection
+builder.Services.AddScoped<IValidator<PersonFluentMuliError>, PersonFluentMultiErrorValidator>();
 
 var app = builder.Build();
 
