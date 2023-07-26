@@ -2,6 +2,7 @@
 using TodoApi.Model;
 using FluentValidation;
 using FluentValidation.Validators;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TodoApi.Validation
 {
@@ -39,14 +40,30 @@ namespace TodoApi.Validation
                                       .NotEmpty()
                                       .MinimumLength(3)
                                       .MaximumLength(20)
-                                      .SetValidator(new ContaintFieldTekst<PersonFluent, string?>("Schmitz", "Jassen"));
+                                      .SetValidator(new ContaintFieldTekst<PersonFluent, string?>("Schmitz", "Jassen"))
+                                      .Must(IsValidName).WithMessage("Rule IsValidNAme Interfield controle gaat fout");
 
             RuleFor(p => p.Leeftijd).InclusiveBetween(18, 65);
+            RuleFor(p => p).Must(InterFieldChecks).WithMessage("Rule Fluent Interfield controle gaat fout");
 
         }
 
+        private bool InterFieldChecks(PersonFluent aPerson)
+        {
+            string CheckName = "elvira";
+            int MinAge = 30;
+
+            if (aPerson.VoorNaam is not null && aPerson.Leeftijd is not null &&
+                (aPerson.VoorNaam.Contains(CheckName) && aPerson.Leeftijd < MinAge))
+            {
+                return false;
+            }
+            return true;
+        }
+
+
         // Simpele versie zonder parameters
-        private bool IsValidName(PersonFluent aPerson, string? name)
+        private static bool IsValidName(PersonFluent aPerson, string? name)
         {
 
             if (name is not null)
@@ -59,6 +76,11 @@ namespace TodoApi.Validation
 
     }
 
+    /// <summary>
+    /// Het attribuut is eigenlijk niet nodig, en levert ook een foute uitvoer op mbt tot de opmaak
+    /// Welke veld heeft welke fout is niet meer zichtbaar
+    /// Omdat ValidationResult slechts 1 veld aan kan.
+    /// </summary>
 
     public class PersonFluentValidatorAttribute : ValidationAttribute
     {
@@ -82,10 +104,10 @@ namespace TodoApi.Validation
 
             var result = validator.Validate(aPerson);
 
-            // Inter veld controles
+            // Inter veld controles, dit hoeft niet hier maar kan ook in de class PersonFluentValidator
             if (result.IsValid)
             {
-                // nog interveld controlles.
+                // nog interveld controlles, hier dan uiteindelijk niet handig
                 // velden check.
                 if (aPerson.VoorNaam is null)
                 {
@@ -115,40 +137,4 @@ namespace TodoApi.Validation
         private static string GetErrorMessageLeeftijdIsLeeg() => $"Model Fluent Validator Atribute  Leeftijd moet gevuld zij";
 
     }
-
-    // 
-    public class ContaintFieldTekst<T, fieldName> : PropertyValidator<T, string?>
-    {
-        private string _CompareValueA;
-        private string _CompareValueB;
-
-        public ContaintFieldTekst(string compareValueA, string compareValueB)
-        {
-            _CompareValueA = compareValueA;
-            _CompareValueB = compareValueB;
-        }
-
-        public override bool IsValid(ValidationContext<T> context, string? field)
-        {
-            if (field != null)
-            {
-                if (!field.Contains(_CompareValueA) && !field.Contains(_CompareValueB))
-                {
-                    context.MessageFormatter.AppendArgument("CompareWoordA", _CompareValueA);
-                    context.MessageFormatter.AppendArgument("CompareWoordB", _CompareValueB);
-                    context.MessageFormatter.AppendArgument("CurrentValue", field);
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public override string Name => "ContaintFieldTekst";
-
-        protected override string GetDefaultMessageTemplate(string errorCode)
-            => "CustomError With Params en Default Message: {PropertyName} has the value '{CurrentValue}' but must contain one of the the words {CompareWoordA} or {CompareWoordB}.";
-    }
-
-
 }

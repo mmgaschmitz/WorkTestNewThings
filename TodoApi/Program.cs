@@ -1,5 +1,4 @@
 using FluentValidation;
-using TodoApi.Model;
 using TodoApi.Validation;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +13,9 @@ builder.Services.AddSwaggerGen();
 // Validator Koppelen
 // builder.Services.AddScoped<IValidator<PersonFluent>, PersonFluentValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<PersonFluentValidator>();  // depenency Injection
-builder.Services.AddScoped<IValidator<PersonFluentMuliError>, PersonFluentMultiErrorValidator>();
+
+// builder.Services.AddScoped<IValidator<PersonFluentMuliError>, PersonFluentMultiErrorValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<PersonFluentMultiErrorValidator>();  // depenency Injection
 
 var app = builder.Build();
 

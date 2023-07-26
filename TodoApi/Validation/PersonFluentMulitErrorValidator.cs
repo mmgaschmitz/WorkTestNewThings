@@ -32,6 +32,7 @@ namespace TodoApi.Validation
                                     .NotEmpty()
                                     .MinimumLength(5).WithMessage("Rule Fluent VoorNaam moet minimaal 5 zijn en maximaal 20")
                                     .MaximumLength(20).WithMessage("Rule Fluent VoorNaam moet minimaal 5 zijn en maximaal 20")
+                                    .Must(IsValidName).WithMessage("Naam mag alleen letters bevatten")
                                     .SetValidator(new ContaintFieldTekst<PersonFluentMuliError, string?>("Maurice", "Elvira"));
 
             // RuleFor(p => p.AchterNaam).NotEmpty();
@@ -39,14 +40,17 @@ namespace TodoApi.Validation
                                       .NotEmpty()
                                       .MinimumLength(3)
                                       .MaximumLength(20)
+                                      .Must(IsValidName).WithMessage("Naam mag alleen letters bevatten")
                                       .SetValidator(new ContaintFieldTekst<PersonFluentMuliError, string?>("Schmitz", "Jassen"));
 
+
             RuleFor(p => p.Leeftijd).InclusiveBetween(18, 65);
+            RuleFor(p => p).NotNull().Must(CheckAgeAtName).WithMessage("Schmitz moet ouder zijn dan 50");
 
         }
 
         // Simpele versie zonder parameters
-        private bool IsValidName(PersonFluent aPerson, string? name)
+        private bool IsValidName(PersonFluentMuliError aPerson, string? name)
         {
 
             if (name is not null)
@@ -56,6 +60,19 @@ namespace TodoApi.Validation
             return false;
         }
 
+        /// <summary>
+        /// Controlles tussen velden zonder serve en geen async
+        /// </summary>
+        /// <param name="comPref"></param>
+        /// <returns></returns>
+        private bool CheckAgeAtName(PersonFluentMuliError aPerson)
+        {
 
+            if (aPerson is not null && aPerson.AchterNaam is not null && aPerson.AchterNaam.Contains("Schmitz") && aPerson.Leeftijd >= 50)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
