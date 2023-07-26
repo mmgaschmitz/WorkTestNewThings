@@ -21,7 +21,7 @@ namespace TodoApi.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            // _logger.Log(LogLevel.Information, "Hello world");
+            _logger.Log(LogLevel.Information, "Hello world");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MKPzkTqjNimsOR2WC5WJhjKLhqw3XzTQaDQaLSw1XduI+0gr9IQTSXTlLf/EofgikH66dG48ZVsyxq6kqR7Ibw==",
+  "dgSpecHash": "i6E0QJXHtoau3XBfQQY8WndeYZBV//GQ+EFVLuTCydyGWxHFXk/P4IY6pvN5OIXW5dBRnxr6L6lPSjeG/QeyoQ==",
   "success": true,
   "projectFilePath": "C:\\devCursus\\testNewThings\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ed76003\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
-    "C:\\Users\\ed76003\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\ed76003\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.6.0\\fluentvalidation.dependencyinjectionextensions.11.6.0.nupkg.sha512",
     "C:\\Users\\ed76003\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\ed76003\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
