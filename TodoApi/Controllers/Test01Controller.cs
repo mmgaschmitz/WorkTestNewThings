@@ -30,7 +30,10 @@ namespace TodoApi.Controllers
             {
                 AchterNaam = "Maurice",
                 VoorNaam = "Schmitz",
-                Leeftijd = 40
+                Leeftijd = 40,
+                Contact = new() { 
+                    Mail = "aa@def.com", 
+                    Telefoon= "343223432"}
             };
             // return NotFound(); // Kan niet
             return Aperson;
@@ -47,7 +50,12 @@ namespace TodoApi.Controllers
             {
                 AchterNaam = "Maurice",
                 VoorNaam = "Schmitz",
-                Leeftijd = 40
+                Leeftijd = 40,
+                Contact = new()
+                {
+                    Mail = "aa@def.com",
+                    Telefoon = "343223432"
+                }
             };
             //var result = Ok(Aperson);
             var result = NotFound(Aperson);
@@ -61,7 +69,12 @@ namespace TodoApi.Controllers
             {
                 AchterNaam = "Maurice",
                 VoorNaam = "Schmitz",
-                Leeftijd = 40
+                Leeftijd = 40,
+                Contact = new()
+                {
+                    Mail = "aa@def.com",
+                    Telefoon = "343223432"
+                }
             };
             //var result = Results.Ok<PersonFluentMuliError>(Aperson);
             var result = Results.NotFound(aPerson);
@@ -134,13 +147,6 @@ namespace TodoApi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateFluentMan2(Model.PersonFluentMuliError aPerson)
         {
-            // Manual Validation, in de body alleen de foutmeldingen. De Status geeft een 400. (dit is ok)
-            ValidationResult result = await _validator1.ValidateAsync(aPerson);
-            if (!result.IsValid)
-            {
-                return BadRequest(result.ToDictionary());
-            }
-
             Console.WriteLine(aPerson.ToString());
             await Task.Delay(1000);
             Console.WriteLine(aPerson.ToString());

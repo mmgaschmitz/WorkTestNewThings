@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[11.6.0, )"
             },
+            "ForEvolve.FluentValidation.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[1.0.25, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.5, )"

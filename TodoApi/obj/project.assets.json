@@ -32,6 +32,21 @@
           }
         }
       },
+      "ForEvolve.FluentValidation.AspNetCore.Http/1.0.25": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.0.0"
+        },
+        "compile": {
+          "lib/net7.0/FluentValidation.AspNetCore.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.AspNetCore.Http.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.OpenApi/7.0.5": {
         "type": "package",
         "dependencies": {
@@ -192,6 +207,20 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "ForEvolve.FluentValidation.AspNetCore.Http/1.0.25": {
+      "sha512": "CAYyqWzwYu54/JAmqL4dr8GLxRmR40YkQG85Vle77lr3/fdGpJ7XifG1h6XKl6BvNqdzZhxxayQ937BbnmbyKg==",
+      "type": "package",
+      "path": "forevolve.fluentvalidation.aspnetcore.http/1.0.25",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "forevolve.fluentvalidation.aspnetcore.http.1.0.25.nupkg.sha512",
+        "forevolve.fluentvalidation.aspnetcore.http.nuspec",
+        "lib/net7.0/FluentValidation.AspNetCore.Http.dll",
+        "lib/net8.0/FluentValidation.AspNetCore.Http.dll"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/7.0.5": {
@@ -553,6 +582,7 @@
     "net7.0": [
       "FluentValidation >= 11.6.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.6.0",
+      "ForEvolve.FluentValidation.AspNetCore.Http >= 1.0.25",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -604,6 +634,10 @@
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
             "version": "[11.6.0, )"
+          },
+          "ForEvolve.FluentValidation.AspNetCore.Http": {
+            "target": "Package",
+            "version": "[1.0.25, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

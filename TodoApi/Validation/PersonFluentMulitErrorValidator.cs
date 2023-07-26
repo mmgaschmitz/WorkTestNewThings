@@ -46,6 +46,8 @@ namespace TodoApi.Validation
 
             RuleFor(p => p.Leeftijd).InclusiveBetween(18, 65);
             RuleFor(p => p).NotNull().Must(CheckAgeAtName).WithMessage("Schmitz moet ouder zijn dan 50");
+            RuleFor(p => p.Contact.Telefoon).NotNull();
+            RuleFor(p => p.Contact.Mail).NotNull();
 
         }
 

@@ -66,3 +66,4 @@ C:\devCursus\testNewThings\TodoApi\obj\Debug\net7.0\TodoApi.genruntimeconfig.cac
 C:\devCursus\testNewThings\TodoApi\obj\Debug\net7.0\ref\TodoApi.dll
 C:\devCursus\testNewThings\TodoApi\bin\Debug\net7.0\FluentValidation.dll
 C:\devCursus\testNewThings\TodoApi\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\devCursus\testNewThings\TodoApi\bin\Debug\net7.0\FluentValidation.AspNetCore.Http.dll
