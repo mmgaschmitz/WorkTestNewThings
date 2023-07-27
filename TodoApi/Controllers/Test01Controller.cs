@@ -138,7 +138,7 @@ namespace TodoApi.Controllers
             ValidationResult result = await _validator1.ValidateAsync(aPerson);
             if (!result.IsValid)
             {
-                return BadRequest(result.ToDictionary());
+                return UnprocessableEntity(result.ToDictionary());
             }
 
             Console.WriteLine(aPerson.ToString());
