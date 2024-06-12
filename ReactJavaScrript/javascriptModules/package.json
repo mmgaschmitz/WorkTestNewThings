@@ -1,0 +1,13 @@
+{
+  "name": "javascriptmodules",
+  "version": "1.0.0",
+  "description": "module test",
+  "main": "useAModules.js",
+  "scripts": {
+    "test": "useAModule.js",
+    "test2": "myapp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

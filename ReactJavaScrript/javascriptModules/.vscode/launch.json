@@ -1,0 +1,34 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Edge",
+      "request": "launch",
+      "type": "msedge",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      // "runtimeExecutable": "C:\\Users\\ed76003\\AppData\\Local\\Microsoft\\AppV\\Client\\Integration\\3264DE94-9E00-4B48-8766-A694225B2783\\Root\\VFS\\ProgramFilesX64\\Google\\Chrome\\Application\\chrome.exe",
+      "runtimeExecutable": "${env:CHROME_PATH}\\chrome.exe",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch FireFox",
+      "request": "launch",
+      "type": "firefox",
+      // "firefoxExecutable": "C:\\Users\\ed76003\\AppData\\Local\\Microsoft\\AppV\\Client\\Integration\\6C1CADE3-0DB7-4154-9001-BABE6CEC64C5\\Root\\VFS\\ProgramFilesX64\\Mozilla Firefox\\firefox.exe",
+      "firefoxExecutable": "${env:FIREFOX_PATH}\\firefox.exe",
+      "firefoxArgs": [],
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
