@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\devCursus\\testNewThings\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|c:\\devcursus\\testnewthings\\types\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|solutionrelative:types\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|c:\\devcursus\\testnewthings\\types\\kort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|solutionrelative:types\\kort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD6E5ED7-D1C3-4AF4-B416-26B6B263DA50}|Types2OtherProjectCreation\\Types2OtherProjectCreation.csproj|c:\\devcursus\\testnewthings\\types2otherprojectcreation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD6E5ED7-D1C3-4AF4-B416-26B6B263DA50}|Types2OtherProjectCreation\\Types2OtherProjectCreation.csproj|solutionrelative:types2otherprojectcreation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,52 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Kort.cs",
-              "DocumentMoniker": "C:\\devCursus\\testNewThings\\Types\\Kort.cs",
-              "RelativeDocumentMoniker": "Types\\Kort.cs",
-              "ToolTip": "C:\\devCursus\\testNewThings\\Types\\Kort.cs",
-              "RelativeToolTip": "Types\\Kort.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T11:03:20.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\devCursus\\testNewThings\\Types\\Program.cs",
-              "RelativeDocumentMoniker": "Types\\Program.cs",
-              "ToolTip": "C:\\devCursus\\testNewThings\\Types\\Program.cs",
-              "RelativeToolTip": "Types\\Program.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAAwEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T08:09:32.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\devCursus\\testNewThings\\Types2OtherProjectCreation\\Program.cs",
-              "RelativeDocumentMoniker": "Types2OtherProjectCreation\\Program.cs",
-              "ToolTip": "C:\\devCursus\\testNewThings\\Types2OtherProjectCreation\\Program.cs",
-              "RelativeToolTip": "Types2OtherProjectCreation\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T08:52:46.641Z",
-              "EditorCaption": ""
-            }
-          ]
+          "SelectedChildIndex": -1,
+          "Children": []
         }
       ]
     }

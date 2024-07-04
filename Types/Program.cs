@@ -65,12 +65,60 @@ a = new Kort {Naam="dd", Getal=23 };
 
 Kort b = new() {Naam="dd", Getal=33 };
 
-// target type;
-M(b ? 1 : 2);
+//// target type;
+// M = (b ? 1 : 2);
 
-void M(short);
-void M(long);
+//void M(short);
+//void M(long);
+
+// Oude manier, zonder extra veld AchterNAam
+
+var mylistOld = new RecordMauriceOld(
+    Name: "maurice",
+    Leeftijd: 52,
+    LijstDrankjes: new DrankjeOld[] {
+        new DrankjeOld (Naam : "Cola", Wens : "light", Aantal : 3),
+        new DrankjeOld (Naam : "Cola", Wens : "extra suiker", Aantal : 2),
+    }
+    );
+
+
+
+// Oude manier, zonder extra veld AchterNAam
+
+var mylist = new RecordMaurice(
+    Name: "maurice",
+    Leeftijd: 52,
+    LijstDrankjes: new Drankje[] {
+        new Drankje (Naam : "Cola", Wens : "light", Aantal : 3),
+        new Drankje (Naam : "Cola", Wens : "extra suiker", Aantal : 2),
+    }
+    );
+
+// Zonder het nieuwe veld
+var mylist2 = new RecordMaurice {
+    Name = "maurice",
+    Leeftijd = 44,
+    LijstDrankjes = new Drankje[] { 
+        new Drankje {Naam = "Cola", Wens = "light", Aantal = 3},
+        new Drankje {Naam = "Cola3",  Aantal = 3},
+        new Drankje {Naam = "Sinas",  Aantal = 3},
+    }
+};
+
+//Met het nieuwe veld
+var mylist3 = new RecordMaurice
+{
+    Name = "maurice",
+    Leeftijd = 32,
+    AchterNaam = "Schmitz",
+    LijstDrankjes = new Drankje[] {
+        new Drankje {Naam = "Cola", Wens = "light", Aantal = 3},
+        new Drankje {Naam = "Cola2",  Aantal = 3},
+        new Drankje {Naam = "Sinas", Aantal = 3},
+    }
+};
+
 
 
 Console.WriteLine("End");
-
