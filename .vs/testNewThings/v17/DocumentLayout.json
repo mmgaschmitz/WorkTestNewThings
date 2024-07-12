@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\devCursus\\testNewThings\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|c:\\devcursus\\testnewthings\\types\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|solutionrelative:types\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|c:\\devcursus\\testnewthings\\types\\recordmaurice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|solutionrelative:types\\recordmaurice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": []
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecordMaurice.cs",
+              "DocumentMoniker": "C:\\devCursus\\testNewThings\\Types\\RecordMaurice.cs",
+              "RelativeDocumentMoniker": "Types\\RecordMaurice.cs",
+              "ToolTip": "C:\\devCursus\\testNewThings\\Types\\RecordMaurice.cs",
+              "RelativeToolTip": "Types\\RecordMaurice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T09:38:28.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\devCursus\\testNewThings\\Types\\Program.cs",
+              "RelativeDocumentMoniker": "Types\\Program.cs",
+              "ToolTip": "C:\\devCursus\\testNewThings\\Types\\Program.cs",
+              "RelativeToolTip": "Types\\Program.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAQwIwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T09:38:26.08Z",
+              "EditorCaption": ""
+            }
+          ]
         }
       ]
     }

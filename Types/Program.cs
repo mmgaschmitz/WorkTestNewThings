@@ -120,5 +120,26 @@ var mylist3 = new RecordMaurice
 };
 
 
+// ?. operator
+DrankjeOld? mijndrankje = null;
+
+if (mijndrankje?.Aantal == 10)
+{
+    Console.WriteLine("IS null: " + mijndrankje?.Aantal);
+    Console.WriteLine("IS null: " + mijndrankje.Aantal);
+}
+else
+{
+    Console.WriteLine("IS null: " + mijndrankje.Aantal);
+}
+
+mijndrankje = new DrankjeOld("Limo",null, 10);
+
+if (mijndrankje?.Aantal == 10)
+{
+    Console.WriteLine("IS not null and 10? " + mijndrankje.Aantal);
+}
+
+
 
 Console.WriteLine("End");

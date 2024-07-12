@@ -1,0 +1,73 @@
+{
+    "betaalgegevensHuidig": [
+        {
+            "indicatieHeffingskortingHuidig": "1",
+            "bedragBetaaldHuidig": 380.43,
+            "betaalDatumHuidig": "20240717",
+            "ibanHuidig": "NL62INGB0001838218",
+            "betaalMaand": "202407"
+        }
+    ],
+    "betaalgegevensHistorie": [
+        {
+            "indicatieHeffingskortingHistorie": "0",
+            "bedragBetaaldHistorie": 327.72,
+            "betaalMaandVan": "202405",
+            "betaalMaandTot": "202403",
+            "excassoHistorie": [
+                {
+                    "betaalDatumExcassoHistorie": "20240521",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                },
+                {
+                    "betaalDatumExcassoHistorie": "20240314",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                },
+                {
+                    "betaalDatumExcassoHistorie": "20240412",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                }
+            ]
+        },
+        {
+            "indicatieHeffingskortingHistorie": "0",
+            "bedragBetaaldHistorie": 330.76,
+            "betaalMaandVan": "202405)",
+            "betaalMaandTot": "202407)",
+            "excassoHistorie": [
+                {
+                    "betaalDatumExcassoHistorie": "20240719",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                },
+                {
+                    "betaalDatumExcassoHistorie": "20240515",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                }
+            ]
+        },
+        {
+            "indicatieHeffingskortingHistorie": "0",
+            "bedragBetaaldHistorie": 330.76,
+            "betaalMaandVan": "202402)",
+            "betaalMaandTot": "202311)",
+            "excassoHistorie": [
+                {
+                    "betaalDatumExcassoHistorie": "20240219",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                },
+                {
+                    "betaalDatumExcassoHistorie": "20231215",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                },
+                {
+                    "betaalDatumExcassoHistorie": "20240118",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                },
+                {
+                    "betaalDatumExcassoHistorie": "20231112",
+                    "ibanExcassoHistorie": "NL62INGB0001838218"
+                }
+            ]
+        }
+    ]
+}

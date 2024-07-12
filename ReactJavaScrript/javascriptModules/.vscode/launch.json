@@ -8,7 +8,7 @@
       "name": "Launch Edge",
       "request": "launch",
       "type": "msedge",
-      "url": "http://localhost:5173",
+      "url": "http://localhost:1337",
       "webRoot": "${workspaceFolder}"
     },
     {
@@ -17,7 +17,7 @@
       "type": "chrome",
       // "runtimeExecutable": "C:\\Users\\ed76003\\AppData\\Local\\Microsoft\\AppV\\Client\\Integration\\3264DE94-9E00-4B48-8766-A694225B2783\\Root\\VFS\\ProgramFilesX64\\Google\\Chrome\\Application\\chrome.exe",
       "runtimeExecutable": "${env:CHROME_PATH}\\chrome.exe",
-      "url": "http://localhost:5173",
+      "url": "http://localhost:1337",
       "webRoot": "${workspaceFolder}"
     },
     {
@@ -27,7 +27,7 @@
       // "firefoxExecutable": "C:\\Users\\ed76003\\AppData\\Local\\Microsoft\\AppV\\Client\\Integration\\6C1CADE3-0DB7-4154-9001-BABE6CEC64C5\\Root\\VFS\\ProgramFilesX64\\Mozilla Firefox\\firefox.exe",
       "firefoxExecutable": "${env:FIREFOX_PATH}\\firefox.exe",
       "firefoxArgs": [],
-      "url": "http://localhost:5173",
+      "url": "http://localhost:1337",
       "webRoot": "${workspaceFolder}"
     }
   ]
