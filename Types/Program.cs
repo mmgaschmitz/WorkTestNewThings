@@ -1,5 +1,5 @@
 ﻿using Types;
-
+using MathLib;
 
 // See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
@@ -40,6 +40,8 @@ void Display<T>(IEnumerable<T> xs) => Console.WriteLine(string.Join(" ", xs));
 */
 // 
 
+var mathInstance = new MathComp();
+var mathResult = mathInstance.Add(100435435, 43543532);
 
 List<int>? numbers = null;
 (numbers ??= new List<int>()).Add(5);

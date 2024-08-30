@@ -1,0 +1,15 @@
+C:\devCursus\testNewThings\Types2OtherProjectCreation\bin\Release\net8.0\Types2OtherProjectCreation.exe
+C:\devCursus\testNewThings\Types2OtherProjectCreation\bin\Release\net8.0\Types2OtherProjectCreation.deps.json
+C:\devCursus\testNewThings\Types2OtherProjectCreation\bin\Release\net8.0\Types2OtherProjectCreation.runtimeconfig.json
+C:\devCursus\testNewThings\Types2OtherProjectCreation\bin\Release\net8.0\Types2OtherProjectCreation.dll
+C:\devCursus\testNewThings\Types2OtherProjectCreation\bin\Release\net8.0\Types2OtherProjectCreation.pdb
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.GeneratedMSBuildEditorConfig.editorconfig
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.AssemblyInfoInputs.cache
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.AssemblyInfo.cs
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.csproj.CoreCompileInputs.cache
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.sourcelink.json
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.dll
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\refint\Types2OtherProjectCreation.dll
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.pdb
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\Types2OtherProjectCreation.genruntimeconfig.cache
+C:\devCursus\testNewThings\Types2OtherProjectCreation\obj\Release\net8.0\ref\Types2OtherProjectCreation.dll

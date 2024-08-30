@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|solutionrelative:types\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1B3D5B79-11E1-453F-8E0D-33DF83799E37}|KrisMathLib\\MathLib.csproj|c:\\devcursus\\testnewthings\\krismathlib\\mathcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B3D5B79-11E1-453F-8E0D-33DF83799E37}|KrisMathLib\\MathLib.csproj|solutionrelative:krismathlib\\mathcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B3D5B79-11E1-453F-8E0D-33DF83799E37}|KrisMathLib\\MathLib.csproj|c:\\devcursus\\testnewthings\\krismathlib\\mathlib.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{1B3D5B79-11E1-453F-8E0D-33DF83799E37}|KrisMathLib\\MathLib.csproj|solutionrelative:krismathlib\\mathlib.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668AB989-C999-4EAB-B5F7-4BC161602003}|MyFirstUnitTest\\MyFirstUnitTest.csproj|c:\\devcursus\\testnewthings\\myfirstunittest\\myclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668AB989-C999-4EAB-B5F7-4BC161602003}|MyFirstUnitTest\\MyFirstUnitTest.csproj|solutionrelative:myfirstunittest\\myclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|c:\\devcursus\\testnewthings\\types\\recordmaurice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EB0388B-6EED-4729-AB2F-083A1F5D9E0B}|Types\\Types.csproj|solutionrelative:types\\recordmaurice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,11 +30,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MathLib",
+              "DocumentMoniker": "C:\\devCursus\\testNewThings\\KrisMathLib\\MathLib.csproj",
+              "RelativeDocumentMoniker": "KrisMathLib\\MathLib.csproj",
+              "ToolTip": "C:\\devCursus\\testNewThings\\KrisMathLib\\MathLib.csproj",
+              "RelativeToolTip": "KrisMathLib\\MathLib.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-24T08:59:57.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyClass.cs",
+              "DocumentMoniker": "C:\\devCursus\\testNewThings\\MyFirstUnitTest\\MyClass.cs",
+              "RelativeDocumentMoniker": "MyFirstUnitTest\\MyClass.cs",
+              "ToolTip": "C:\\devCursus\\testNewThings\\MyFirstUnitTest\\MyClass.cs",
+              "RelativeToolTip": "MyFirstUnitTest\\MyClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T08:59:38.683Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MathComp.cs",
+              "DocumentMoniker": "C:\\devCursus\\testNewThings\\KrisMathLib\\MathComp.cs",
+              "RelativeDocumentMoniker": "KrisMathLib\\MathComp.cs",
+              "ToolTip": "C:\\devCursus\\testNewThings\\KrisMathLib\\MathComp.cs",
+              "RelativeToolTip": "KrisMathLib\\MathComp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T08:58:01.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RecordMaurice.cs",
               "DocumentMoniker": "C:\\devCursus\\testNewThings\\Types\\RecordMaurice.cs",
               "RelativeDocumentMoniker": "Types\\RecordMaurice.cs",
@@ -30,8 +77,7 @@
               "RelativeToolTip": "Types\\RecordMaurice.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T09:38:28.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T09:38:28.99Z"
             },
             {
               "$type": "Document",
@@ -41,7 +87,7 @@
               "RelativeDocumentMoniker": "Types\\Program.cs",
               "ToolTip": "C:\\devCursus\\testNewThings\\Types\\Program.cs",
               "RelativeToolTip": "Types\\Program.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAQwIwAAAABAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T09:38:26.08Z",
               "EditorCaption": ""
