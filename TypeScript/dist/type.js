@@ -36,12 +36,12 @@ const asinger = "Hello";
 console.log("Var: " + asinger + ", Type: " + typeof asinger);
 let asinger2 = "naam";
 // fout: m een error
-asinger2 = 123;
+// asinger2 = 123;
 // fout:
-asinger2 = true;
+// asinger2 = true;
 let asinger3 = "naam";
 // fout:
-asinger3 = 123;
+// asinger3 = 123;
 // fout:
 asinger3 = true;
 //
@@ -60,7 +60,7 @@ if (typeof itCanbe === "string") {
 // why ===
 let num = 10;
 let str = "10";
-console.log(num == str); // true - The values are the same after type conversion
-console.log(num === str);
+// console.log(num == str); // true - The values are the same after type conversion
+// console.log(num === str);
 let bool = true;
 //# sourceMappingURL=type.js.map
