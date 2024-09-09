@@ -49,6 +49,7 @@ let asinger2: string = "naam";
 // asinger2 = 123;
 // fout:
 // asinger2 = true;
+asinger2 = "naam2";
 
 let asinger3: string | boolean = "naam";
 // fout:
@@ -76,8 +77,13 @@ if (typeof itCanbe === "string") {
 
 let num: number = 10;
 let str: string = "10";
+num = 10;
+str = "10";
 
 // console.log(num == str); // true - The values are the same after type conversion
-// console.log(num === str);
+//  console.log(num === str);
 
 let bool = true;
+bool = true;
+console.log(num, str, bool);
+console.log(asinger, asinger2, asinger3);

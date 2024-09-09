@@ -7,4 +7,3 @@ function SaySomeElse(tekst) {
     console.log(tekst);
     return "Say Iets Anders " + tekst;
 }
-//# sourceMappingURL=module1.js.map

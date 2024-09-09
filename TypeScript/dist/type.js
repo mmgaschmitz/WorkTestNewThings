@@ -39,6 +39,7 @@ let asinger2 = "naam";
 // asinger2 = 123;
 // fout:
 // asinger2 = true;
+asinger2 = "naam2";
 let asinger3 = "naam";
 // fout:
 // asinger3 = 123;
@@ -60,7 +61,11 @@ if (typeof itCanbe === "string") {
 // why ===
 let num = 10;
 let str = "10";
+num = 10;
+str = "10";
 // console.log(num == str); // true - The values are the same after type conversion
-// console.log(num === str);
+//  console.log(num === str);
 let bool = true;
-//# sourceMappingURL=type.js.map
+bool = true;
+console.log(num, str, bool);
+console.log(asinger, asinger2, asinger3);

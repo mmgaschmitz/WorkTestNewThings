@@ -9,4 +9,3 @@ function SaySomeElse(tekst) {
 }
 // Nieuwere manier
 export { name, SayHello };
-//# sourceMappingURL=module2.js.map

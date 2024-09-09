@@ -12,4 +12,3 @@ console.timeLog("timer01");
 console.timeLog("timer01");
 console.timeEnd("timer01");
 console.trace("Maurice");
-//# sourceMappingURL=index.js.map
