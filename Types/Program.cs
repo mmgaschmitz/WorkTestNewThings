@@ -128,11 +128,11 @@ DrankjeOld? mijndrankje = null;
 if (mijndrankje?.Aantal == 10)
 {
     Console.WriteLine("IS null: " + mijndrankje?.Aantal);
-    Console.WriteLine("IS null: " + mijndrankje.Aantal);
+    Console.WriteLine("IS null: " + mijndrankje?.Aantal);
 }
 else
 {
-    Console.WriteLine("IS null: " + mijndrankje.Aantal);
+    Console.WriteLine("IS null: " + mijndrankje?.Aantal);
 }
 
 mijndrankje = new DrankjeOld("Limo",null, 10);
@@ -141,6 +141,43 @@ if (mijndrankje?.Aantal == 10)
 {
     Console.WriteLine("IS not null and 10? " + mijndrankje.Aantal);
 }
+
+
+
+// nullable
+
+string naam = "maurice";
+string naamb = null;
+string? naamc = null;
+
+Console.WriteLine(naam, naamb, naamc);
+
+double getal = 232.33D;
+// double getalb = null;  // Compile fout
+double? getalc = null;
+
+Console.WriteLine(getal.ToString(), getalc);
+
+DateTime datum = DateTime.Now;
+// DateTime datumb = null;  // Compile fout
+DateTime? datumc = null;
+
+Console.WriteLine(datum.ToString(), datumc.ToString());
+
+
+Kort mijnobj = new();
+Kort mijnobjB = null;
+Kort? mijnobjC = null;
+
+Console.WriteLine(mijnobj.Naam?.ToString()) ;
+Console.WriteLine( mijnobjB?.Naam);
+Console.WriteLine( mijnobjC?.Naam);
+
+ mijnobjB = new();
+ mijnobjC = new();
+Console.WriteLine(mijnobjB?.Naam?.ToString());
+Console.WriteLine(mijnobjC?.Naam?.ToString());
+
 
 
 

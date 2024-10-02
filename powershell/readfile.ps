@@ -1,0 +1,7 @@
+$naamfile = import-csv .\data.txt
+
+foreach($person in $naamfile)
+{
+	write-output  "Uw Naam"  $person.voornaam
+	write-output "Uw Achternaam"  $person.achternaam
+}
