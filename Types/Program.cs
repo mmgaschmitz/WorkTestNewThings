@@ -150,7 +150,8 @@ string naam = "maurice";
 string naamb = null;
 string? naamc = null;
 
-naamb = naamc ?? throw new Exception("hello");
+// try this ??  or ?. or 1.
+// naamb = naamc ?? throw new Exception("hello");
 
 
 Console.WriteLine(naam, naamb, naamc);
@@ -160,9 +161,13 @@ double getal = 232.33D;
 double? getalc = null;
 
 Console.WriteLine(getal.ToString(), getalc);
+// https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-forgiving
+// beide geveb eeb runtime error, de eerste geeft geen waarschuwing tijdens compile
+// Console.WriteLine("Moet gevuld zijn anders exception", getalc!.Value);
+Console.WriteLine("Moet gevuld zijn anders exception", getalc.Value);
 
 DateTime datum = DateTime.Now;
-// DateTime datumb = null;  // Compile fout
+//DateTime datumb = null;  // Compile fout
 DateTime? datumc = null;
 
 Console.WriteLine(datum.ToString(), datumc.ToString());
