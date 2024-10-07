@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +42,15 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -54,8 +62,7 @@
               "RelativeToolTip": "Types\\Kort.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T10:04:28.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T10:04:28.157Z"
             },
             {
               "$type": "Document",
@@ -78,8 +85,7 @@
               "RelativeToolTip": "MyFirstUnitTest\\MyClass.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:59:38.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T08:59:38.683Z"
             },
             {
               "$type": "Document",
@@ -91,8 +97,7 @@
               "RelativeToolTip": "KrisMathLib\\MathComp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:58:01.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T08:58:01.475Z"
             },
             {
               "$type": "Document",
@@ -104,8 +109,7 @@
               "RelativeToolTip": "Types\\RecordMaurice.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAwwBMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T09:38:28.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T09:38:28.99Z"
             },
             {
               "$type": "Document",
@@ -115,7 +119,7 @@
               "RelativeDocumentMoniker": "Types\\Program.cs",
               "ToolTip": "C:\\devCursus\\testNewThings\\Types\\Program.cs",
               "RelativeToolTip": "Types\\Program.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAD4v68AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAIAwwJoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T09:38:26.08Z",
               "EditorCaption": ""

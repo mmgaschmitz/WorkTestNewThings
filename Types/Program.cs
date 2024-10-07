@@ -150,6 +150,9 @@ string naam = "maurice";
 string naamb = null;
 string? naamc = null;
 
+naamb = naamc ?? throw new Exception("hello");
+
+
 Console.WriteLine(naam, naamb, naamc);
 
 double getal = 232.33D;

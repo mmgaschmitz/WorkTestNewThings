@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+
+#.net
 obj
 obj/debug
 
@@ -21,8 +23,8 @@ obj/debug
 !.vscode/launch.json
 .idea
 .DS_Store
-*.suo
+!*.suo
 *.ntvs*
 *.njsproj
-*.sln
+!*.sln
 *.sw?
