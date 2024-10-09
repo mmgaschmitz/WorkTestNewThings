@@ -1,0 +1,16 @@
+{
+  "name": "nodelearning",
+  "version": "2.1.0",
+  "description": "Maurice Learning Path",
+  "main": "FirstJsServer.js",
+  "scripts": {
+    "runserv": "node FirstJsServer.js"
+  },
+  "keywords": [
+    "a",
+    "test",
+    "project"
+  ],
+  "author": "Maurice Schmitz",
+  "license": "ISC"
+}
