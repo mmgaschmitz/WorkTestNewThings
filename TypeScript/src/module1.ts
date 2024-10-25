@@ -1,4 +1,4 @@
-export const name = "hello module01";
+export const name = "hello module01 is working now";
 
 export function SayHello(tekst: string): string {
   console.log(name + " " + tekst);

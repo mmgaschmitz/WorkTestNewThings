@@ -1,4 +1,4 @@
-const name = "hello module02";
+const name = "hello module02 is working now";
 
 function SayHello(tekst: string): string {
   console.log(name + " " + tekst);

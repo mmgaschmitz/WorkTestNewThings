@@ -23,8 +23,14 @@ console.log("Var: " + singer3 + ", Type: " + typeof singer3);
 Maurice();
 
 {
+  let singer2 = "blocked scopy"; // bestond buiten het blok is hier een nieuwe
+  console.log(singer3); // singer3 als var bestond al file level.
   var singer3 = "bekend";
+  console.log(singer3);
+
+  // console.log(singer4); // Variabele bestaat nog niet
   var singer4: string = "onbekend";
+  console.log(singer4);
 }
 
 Maurice();
