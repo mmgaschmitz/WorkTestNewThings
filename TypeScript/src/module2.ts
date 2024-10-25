@@ -1,14 +1,14 @@
-const name = "hello module01";
+const name = "hello module02";
 
 function SayHello(tekst: string): string {
-  console.log(tekst);
-  return SaySomeElse("via Hello " + tekst);
+  console.log(name + " " + tekst);
+  return SaySomeElse("via Hello " + name + " : " + tekst);
 }
 
 function SaySomeElse(tekst: string): string {
-  console.log(tekst);
-  return "Say Iets Anders " + tekst;
+  console.log(name + " " + tekst);
+  return "Say Iets Anders " + name + " : " + tekst;
 }
 
 // Nieuwere manier
-export { name, SayHello };
+export { name, SayHello, SaySomeElse };
