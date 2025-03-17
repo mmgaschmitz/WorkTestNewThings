@@ -17,17 +17,14 @@
           display: flex;
         }
         
-        .flex-container > a {
+        .flex-container > a, .flex-container > span {
           margin: 10px;
           padding: 20px;
-          font-size: 30px;
+          font-size: 20pt;
         }
-        .flex-container > .slidergroup > input[type=range].slider {
-          appearance: none;
-          height: 1.8em;
-          min-width: 25em;
-          vertical-align: auto;
 
+        .flex-container > span {
+            background-color: #0485fd;
         }
         .flex-container > a.option01 {
             background-color: #08524b;
@@ -35,8 +32,15 @@
         .flex-container > a.option02 {
             background-color: #17c970;
         }
-        .flex-container > a.option03 {
-            background-color: #d3e913;
+        .flex-container > .slidergroup > input[type=range].slider {
+          appearance: none;
+          height: 3em;
+          min-width: 25em;
+          vertical-align: middle;
+        }
+        .flex-container > .slidergroup {
+          vertical-align: middle;
+          font-size: 20pt;
         }
         </style>
   
@@ -45,21 +49,21 @@
 <h1>Cultuurhuis DMX verlichting Zaal</h1>
 <p>Eerst de computer in de zaal opstarten.</p>
 <div class="flex-container">
-    <a class="option01" data-option="?Option=1a" onclick="onclickfun(this)"> Hello 01 </a>
-    <a class="option02" data-option="?Option=2a" onclick="onclickfun(this)"> Hello 02 </a>
-    <a class="option03" data-option="?Option=3a" onclick="onclickfun(this)"> Hello 03 </a>
+    <span>Naam van de Quelist</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="79" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="79" onclick="onclickfunResetQueList(this)">Release</a>
     <div  class="slidergroup">
-      <label class="label">Intensity</label>
-      <input class="slider" data-option="?Option=ASlider" oninput="onSliderInput(this)" onclick="onSliderInput(this)" type="range" min="0" max="255" step="1" value="200"></input>
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="79" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="200"></input>
     </div>
   </div>
   <div class="flex-container">
-    <a class="option01" data-option="?Option=1b" onclick="onclickfun(this)"> Hello 01 </a>
-    <a class="option02" data-option="?Option=2b" onclick="onclickfun(this)"> Hello 02 </a>
-    <a class="option03" data-option="?Option=3b" onclick="onclickfun(this)"> Hello 03 </a>
+    <span>Naam van de Quelist</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="80" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="80" onclick="onclickfunResetQueList(this)">Release</a>
     <div class="slidergroup">
-      <label class="label">Intensity</label>
-      <input class="slider" data-option="?Option=BSlider" oninput="onSliderInput(this)" onclick="onSliderInput(this)" type="range" min="0" max="255" step="1" value="100"></input>
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="80" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="100"></input>
     </div>
   <div>
 </body>
@@ -80,22 +84,34 @@
   }
 
   // Update the current slider value (each time you drag the slider handle)
-  function onclickfun(element)
+  function onclickfunSetQueList(element)
   {
-    var option =element.getAttribute("data-option");
-        console.log("Mijn keuze: " + option);
-        xhttp.open("GET", "TestPage01.html" + option, false);
+    var label = element.closest(".flex-container").getElementsByClassName("isactive");
+    label[0].innerHTML="Aan"
+
+    var quelist =element.getAttribute("data-quelist");
+        xhttp.open("GET", "TestPage01.html?MXM_GQL_" + quelist, false);
         xhttp.send();        
   }
 
-  function onSliderInput(element)
+  function onclickfunResetQueList(element)
+  {
+    var label = element.closest(".flex-container").getElementsByClassName("isactive");;
+    label[0].innerHTML="Uit"
+
+    var quelist =element.getAttribute("data-quelist");
+    xhttp.open("GET", "TestPage01.html?MXM_RQL_" + quelist, false);
+    xhttp.send();        
+  }
+
+
+  function onSliderChangeIntensity(element)
   {
     var value=element.value;
-    var option =element.getAttribute("data-option");
+    var quelist =element.getAttribute("data-quelist");
     var label = element.closest(".slidergroup").getElementsByClassName("label");
     label[0].innerHTML = tekst + " " + value;
-    console.log("Mijn Slider keuze: " + option + "Value" + value);
-    xhttp.open("GET", "TestPage01.html" + option + value, false);
+    xhttp.open("GET", "TestPage01.html?MXM_SQL_" + quelist + "_" + value, false);
     xhttp.send();        
   }
 </script>
