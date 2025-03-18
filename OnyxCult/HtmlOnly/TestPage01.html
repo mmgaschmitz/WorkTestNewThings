@@ -49,21 +49,21 @@
 <h1>Cultuurhuis DMX verlichting Zaal</h1>
 <p>Eerst de computer in de zaal opstarten.</p>
 <div class="flex-container">
-    <span>Naam van de Quelist</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
-    <a class="option01" data-quelist="79" onclick="onclickfunSetQueList(this)">Go</a>
-    <a class="option02" data-quelist="79" onclick="onclickfunResetQueList(this)">Release</a>
+    <span>Color als GloeiLamp</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="662" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="662" onclick="onclickfunResetQueList(this)">Release</a>
     <div  class="slidergroup">
       <label class="label">Intensity</label><br>
-      <input class="slider" data-quelist="79" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="200"></input>
+      <input class="slider" data-quelist="662" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="200"></input>
     </div>
   </div>
   <div class="flex-container">
     <span>Naam van de Quelist</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
-    <a class="option01" data-quelist="80" onclick="onclickfunSetQueList(this)">Go</a>
-    <a class="option02" data-quelist="80" onclick="onclickfunResetQueList(this)">Release</a>
+    <a class="option01" data-quelist="663" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="663" onclick="onclickfunResetQueList(this)">Release</a>
     <div class="slidergroup">
       <label class="label">Intensity</label><br>
-      <input class="slider" data-quelist="80" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="100"></input>
+      <input class="slider" data-quelist="663" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="100"></input>
     </div>
   <div>
 </body>
@@ -90,7 +90,7 @@
     label[0].innerHTML="Aan"
 
     var quelist =element.getAttribute("data-quelist");
-        xhttp.open("GET", "TestPage01.html?MXM_GQL_" + quelist, false);
+        xhttp.open("GET", "?MXM_GQL_" + quelist, false);
         xhttp.send();        
   }
 
@@ -100,7 +100,7 @@
     label[0].innerHTML="Uit"
 
     var quelist =element.getAttribute("data-quelist");
-    xhttp.open("GET", "TestPage01.html?MXM_RQL_" + quelist, false);
+    xhttp.open("GET", "?MXM_RQL_" + quelist, false);
     xhttp.send();        
   }
 
@@ -111,7 +111,7 @@
     var quelist =element.getAttribute("data-quelist");
     var label = element.closest(".slidergroup").getElementsByClassName("label");
     label[0].innerHTML = tekst + " " + value;
-    xhttp.open("GET", "TestPage01.html?MXM_SQL_" + quelist + "_" + value, false);
+    xhttp.open("GET", "?MXM_SQL_" + quelist + "_" + value, false);
     xhttp.send();        
   }
 </script>
