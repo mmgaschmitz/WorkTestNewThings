@@ -1,7 +1,8 @@
 
-import { useForm } from "react-hook-form"
+import { useForm, SubmitHandler} from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { useState } from "react"
 
 // https://strapi.io/blog/yup-validation-in-react-hook-form-a-complete-guide-with-examples
 // https://react-hook-form.com/get-started
@@ -12,53 +13,76 @@ type InputsDataType = {
   leeftijd: number
 }
 
-const myData: InputsDataType  = {
- example: "hello",
- exampleRequired: "en nog meer",
- leeftijd: 5
-}
-
-console.log(myData);
-
-const InputsSchema = yup.object().shape(
-  {
-    example: yup.string().trim().uppercase(),
-    exampleRequired:  yup.string().required("exampleRequired is verplicht").trim(),
-    leeftijd: yup.number().typeError("Moet een getal zijn").required("Leedtijd is verplicht").min(10, "Mininmaal 10").max(60, "Maximaal 60"),
-  }
-);
-
-type InputsSchemaType = yup.InferType<typeof InputsSchema>;
-
-
-
-// Validate to yup schema.
-try
-{
-  InputsSchema.validateSync(myData);
-}
-catch(error)
-{
-  let message
-	if (error instanceof Error) message = error.message
-	else message = String(error)
-  console.log(message);
-}
 
 export default function App() {
+
+  const myInitData: InputsDataType  = {
+  example: "Hello",
+  exampleRequired: "Example Tekst",
+  leeftijd: 18
+  }
+
+  const [myData, setMyData] = useState<InputsDataType>(myInitData);
+
+  console.log("Current myData:", myData)
+
+  const InputsSchema = yup.object().shape(
+    {
+      example: yup
+      .string()
+      .nullable()
+      .trim()
+      .uppercase()
+      .required("example is verplicht"),
+      exampleRequired:  yup
+      .string()
+      .required("exampleRequired is verplicht")
+      .trim(),
+      leeftijd: yup
+      .number()
+      .typeError("Moet een getal zijn")
+      .required("Leedtijd is verplicht")
+      .min(10, "Mininmaal 10")
+      .max(60, "Maximaal 60"),
+    }
+  );
+
+  // type InputsSchemaType = yup.InferType<typeof InputsSchema>;
+
+    // Validate to yup schema as test.
+  // try
+  // {
+  //   InputsSchema.validateSync(myData);
+  // }
+  // catch(error)
+  // {
+  //   let message
+  //   if (error instanceof Error) message = error.message
+  //   else message = String(error)
+  //   console.log(message);
+  // } 
+
+
   const {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
-  } = useForm(
+  } = useForm<InputsDataType>(
     {
        resolver: yupResolver(InputsSchema),
-    }
-  );
+       defaultValues: myInitData,
+  });
 
 
-  const onSubmit = (data: InputsSchemaType) => console.log(data)
+
+    // Submit handler
+    const onSubmit: SubmitHandler<InputsDataType> = (data) => {
+      console.log(data);
+      setMyData(data);
+      reset(data);
+    };
 
 
   console.log(watch("example")) // watch input value by passing the name of it
@@ -71,7 +95,7 @@ export default function App() {
     
       <p>
         {/* register your input into the hook by invoking the "register" function */}
-        <input defaultValue="test" {...register("example")} />
+        <input {...register("example")} />
       </p>
         <p>
         {/* include validation with required or other standard HTML validation rules */}
@@ -79,7 +103,7 @@ export default function App() {
         {/* errors will return when field validation fails  */}
       </p>
       <p>
-        <input defaultValue="10" {...register("leeftijd")}></input>
+        <input {...register("leeftijd")}></input>
       </p>
       <h3>Errror's</h3>
         {errors.exampleRequired && (
