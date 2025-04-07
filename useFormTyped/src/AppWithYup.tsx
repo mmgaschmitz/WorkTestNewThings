@@ -23,8 +23,8 @@ console.log(myData);
 const InputsSchema = yup.object().shape(
   {
     example: yup.string().trim().uppercase(),
-    exampleRequired:  yup.string().required("A is verplicht").trim(),
-    leeftijd: yup.number().required().min(10, "Mininmaal 10").max(60, "Maximaal 60"),
+    exampleRequired:  yup.string().required("exampleRequired is verplicht").trim(),
+    leeftijd: yup.number().typeError("Moet een getal zijn").required("Leedtijd is verplicht").min(10, "Mininmaal 10").max(60, "Maximaal 60"),
   }
 );
 
@@ -82,11 +82,20 @@ export default function App() {
         <input defaultValue="10" {...register("leeftijd")}></input>
       </p>
       <h3>Errror's</h3>
-        {errors.exampleRequired?.type === "required" && <p>This field is required (DOT IT SELF)</p>}
-        {errors.leeftijd?.type === "required" && <p>This field is required (DOT IT SELF)</p>}
-        {errors.leeftijd?.type === "min" && <p>Minimaal 25 jaar (DOT IT SELF)</p>}
-        {errors.leeftijd?.type === "max" && <p>Maximale 90 jaar (DOT IT SELF)</p>}
-        {errors.leeftijd && <p>{errors.leeftijd.message}</p>}
+        {errors.exampleRequired && (
+          <div>
+            <h4>ExampleRequired fouten</h4>
+            <p>{errors.exampleRequired.message}</p>
+          </div>
+          )
+        }
+        {errors.leeftijd && (
+          <div>
+            <h4>Leeftijd fouten</h4>
+            <p>{errors.leeftijd.message}</p>
+          </div>
+          )
+        }
       <input type="submit" />
     </form>
   )
