@@ -2,78 +2,201 @@
 <html>
     <style>
         body {
-          background-color: rgba(68, 85, 243, 0.993);
-          color: white
+          background-color: #0485fd;
+          color: #f0f0f0;
         }
+        body a {
+          color: #f0f0f0;
 
+        }
+        body a:visited {
+          color: #f0f0f0;
+
+        }
         .flex-container {
           display: flex;
-          flex-wrap: wrap;
-          background-color: rgba(68, 85, 243, 0.993);
         }
         
-        .flex-container > a {
-          background-color: rgba(68, 85, 243, 0.993);
+        .flex-container > a, .flex-container > span {
           margin: 10px;
-          padding: 20px;
-          font-size: 30px;
+          padding: 10px;
+          font-size: 16pt;
+          width: 200px;
         }
-        .flex-container > a.aan {
-            background-color: #08efff;
-            color: black
+
+        .flex-container > span {
+            background-color: #0485fd;
         }
-        .flex-container > a.uit {
-            background-color: #0602f8;
-            color: white
+        .flex-container > a.option01 {
+            background-color: #08524b;
         }
-        .flex-container > a.option03 {
-            background-color: #d3e913;
-            color: white
+        .flex-container > a.option02 {
+            background-color: #17c970;
+        }
+        .flex-container > .slidergroup > input[type=range].slider {
+          appearance: none;
+          height: 2.5em;
+          min-width: 25em;
+          vertical-align: middle;
+        }
+        .flex-container > .slidergroup {
+          vertical-align: middle;
+          font-size: 20pt;
         }
         </style>
-        
+  
 <body>
 
-<h1>Cultuurhuis Landgraaf DMX Concert Zaal</h1>
-<p>Start eerste de computer van de verlichting in de zaal</p>
-<h2>Test</h2>
-<div class="flex-container">
-    <a href="?MXM_GQL_79" class="aan"> Scene1 Aan</a>
-    <a href="?MXM_RQL_79" class="uit"> Scene1 uit </a>
-    <a href="?MXM_GQL_75" class="aan"> Scene2 Aan </a>
-    <a href="?MXM_RQL_75" class="uit"> Scene2 uit </a>
-  </div>
-  <h2>Carnval</h2>
+<h1>Cultuurhuis DMX verlichting Zaal</h1>
+<h2>Ramen Links/Rechts</h2>
   <div class="flex-container">
-  <a href="?MXM_GQL_590" class="aan"> Carnval Basis</a>
-  <a href="?MXM_GQL_591" class="aan"> Carnval Steps</a>
-  <a href="?MXM_GQL_592" class="aan"> Carnval Auto</a>
-  <a href="?MXM_GQL_579" class="aan"> Moving Wall</a>
-  <a href="?MXM_GQL_589" class="aan"> Moving Zaal</a>
-  <a href="?MXM_GQL_595" class="aan"> Moving Color Zaal</a>
-
-  </div>
-<!--   <div class="flex-container">
-    <a href="?MXM_SQL_590_30" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_60" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_90" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_150" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_170" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_200" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_225" class="aan"> ColorPodium x%</a>
-    <a href="?MXM_SQL_590_255" class="aan"> ColorPodium xx%</a>
+    <span>3 Color blauw paars.. </span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="780" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="780" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="780" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
     </div>
- -->    <div class="flex-container">
-    <a href="?MXM_RQL_590" class="uit"> Carnval Basis UIt</a>
-    <a href="?MXM_RQL_591" class="uit"> Carnval Steps UIt</a>
-    <a href="?MXM_RQL_592" class="uit"> Carnval Auto Uit</a>
-    <a href="?MXM_RQL_579" class="uit"> Moving Wall Uit</a>
-    <a href="?MXM_RQL_589" class="uit"> Moving Zaal Uit</a>
-    <a href="?MXM_RQL_595" class="uit"> Moving Color Zaal</a>
   </div>
-    <h2>Afsluiten</h2>
   <div class="flex-container">
-  <a href="?MXM_ACT_4" class="option03"> Alles uit </a>
-</div>
+    <span>2 Color oranje/geel </span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="781" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="781" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="781" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+    <span>2 Color blauw/blauw </span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="782" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="782" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="782" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+    <span>2 Color groen / geel </span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="783" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="783" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="783" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+    <span>1 Color orange </span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="784" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="784" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="784" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+    <span>Orgel dimmer </span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="785" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="785" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="785" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
+    </div>
+  </div>
+  <h2>Podium</h2>
+  <div class="flex-container">
+    <span>Front Chauvets 5 stuks</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="786" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="786" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="786" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="150"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+      <span>Eled Front L/R</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+      <a class="option01" data-quelist="787" onclick="onclickfunSetQueList(this)">Go</a>
+      <a class="option02" data-quelist="787" onclick="onclickfunResetQueList(this)">Release</a>
+      <div  class="slidergroup">
+        <label class="label">Intensity</label><br>
+        <input class="slider" data-quelist="787" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="175"></input>
+      </div>
+    </div>
+    <div class="flex-container">
+      <span>Eled Back</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+      <a class="option01" data-quelist="788" onclick="onclickfunSetQueList(this)">Go</a>
+      <a class="option02" data-quelist="788" onclick="onclickfunResetQueList(this)">Release</a>
+      <div  class="slidergroup">
+        <label class="label">Intensity</label><br>
+        <input class="slider" data-quelist="788" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="175"></input>
+      </div>
+    </div>
+    <div class="flex-container">
+      <span>Partij Verlichting Midden</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+      <a class="option01" data-quelist="789" onclick="onclickfunSetQueList(this)">Go</a>
+      <a class="option02" data-quelist="789" onclick="onclickfunResetQueList(this)">Release</a>
+      <div  class="slidergroup">
+        <label class="label">Intensity</label><br>
+        <input class="slider" data-quelist="789" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="255"></input>
+      </div>
+    </div>
+    <div class="flex-container">
+      <span>All top color as gloeilamp</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+      <a class="option01" data-quelist="790" onclick="onclickfunSetQueList(this)">Go</a>
+      <a class="option02" data-quelist="790" onclick="onclickfunResetQueList(this)">Release</a>
+      <div  class="slidergroup">
+        <label class="label">Intensity</label><br>
+        <input class="slider" data-quelist="790" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="150"></input>
+      </div>
+    </div>
 </body>
+<script>
+  var xhttp = new XMLHttpRequest();
+
+  var tekst = "Intensity";
+  var sliderGroup = document.getElementsByClassName("slidergroup");
+  for (let i = 0; i < sliderGroup.length; i++) {
+      initSlider(sliderGroup[i])
+  }
+  
+  function initSlider(item)
+  {
+    var slider = item.getElementsByClassName("slider")
+    var label = item.getElementsByClassName("label")
+    label[0].innerHTML = tekst + " " + slider[0].value;
+  }
+
+  // Update the current slider value (each time you drag the slider handle)
+  function onclickfunSetQueList(element)
+  {
+    var label = element.closest(".flex-container").getElementsByClassName("isactive");
+    label[0].innerHTML="Aan"
+
+    var quelist =element.getAttribute("data-quelist");
+        xhttp.open("GET", "?MXM_GQL_" + quelist, false);
+        xhttp.send();        
+  }
+
+  function onclickfunResetQueList(element)
+  {
+    var label = element.closest(".flex-container").getElementsByClassName("isactive");;
+    label[0].innerHTML="Uit"
+
+    var quelist =element.getAttribute("data-quelist");
+    xhttp.open("GET", "?MXM_RQL_" + quelist, false);
+    xhttp.send();        
+  }
+
+
+  function onSliderChangeIntensity(element)
+  {
+    var value=element.value;
+    var quelist =element.getAttribute("data-quelist");
+    var label = element.closest(".slidergroup").getElementsByClassName("label");
+    label[0].innerHTML = tekst + " " + value;
+    xhttp.open("GET", "?MXM_SQL_" + quelist + "_" + value, false);
+    xhttp.send();        
+  }
+</script>
+
 </html>

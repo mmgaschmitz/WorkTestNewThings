@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+          background-color: #0485fd;
+          color: #f0f0f0;
+        }
+        body a {
+          color: #f0f0f0;
+
+        }
+        body a:visited {
+          color: #f0f0f0;
+
+        }
+        .flex-container {
+          display: flex;
+        }
+        
+        .flex-container > a, .flex-container > span {
+          margin: 10px;
+          padding: 20px;
+          font-size: 20pt;
+        }
+
+        .flex-container > span {
+            background-color: #0485fd;
+        }
+        .flex-container > a.option01 {
+            background-color: #08524b;
+        }
+        .flex-container > a.option02 {
+            background-color: #17c970;
+        }
+        .flex-container > .slidergroup > input[type=range].slider {
+          appearance: none;
+          height: 3em;
+          min-width: 25em;
+          vertical-align: middle;
+        }
+        .flex-container > .slidergroup {
+          vertical-align: middle;
+          font-size: 20pt;
+        }
+        </style>
+  
+<body>
+
+<h1>Cultuurhuis DMX verlichting Zaal</h1>
+<p>Eerst de computer in de zaal opstarten.</p>
+<div class="flex-container">
+    <span>Color als GloeiLamp</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="344" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="344" onclick="onclickfunResetQueList(this)">Release</a>
+    <div  class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="344" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="200"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+    <span>Naam van de Quelist</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="34" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="34" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="34" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="100"></input>
+    </div>
+  </div>
+  <div class="flex-container">
+    <span>Front Chauvets 5 stuks</span>&nbsp;<span class="isactive" data-active="false">aan/uit</span>
+    <a class="option01" data-quelist="797" onclick="onclickfunSetQueList(this)">Go</a>
+    <a class="option02" data-quelist="797" onclick="onclickfunResetQueList(this)">Release</a>
+    <div class="slidergroup">
+      <label class="label">Intensity</label><br>
+      <input class="slider" data-quelist="797" oninput="onSliderChangeIntensity(this)" onclick="onSliderChangeIntensity(this)" type="range" min="0" max="255" step="1" value="100"></input>
+    </div>
+  </div>
+</body>
+<script>
+  var xhttp = new XMLHttpRequest();
+
+  var tekst = "Intensity";
+  var sliderGroup = document.getElementsByClassName("slidergroup");
+  for (let i = 0; i < sliderGroup.length; i++) {
+      initSlider(sliderGroup[i])
+  }
+  
+  function initSlider(item)
+  {
+    var slider = item.getElementsByClassName("slider")
+    var label = item.getElementsByClassName("label")
+    label[0].innerHTML = tekst + " " + slider[0].value;
+  }
+
+  // Update the current slider value (each time you drag the slider handle)
+  function onclickfunSetQueList(element)
+  {
+    var label = element.closest(".flex-container").getElementsByClassName("isactive");
+    label[0].innerHTML="Aan"
+
+    var quelist =element.getAttribute("data-quelist");
+        xhttp.open("GET", "?MXM_GQL_" + quelist, false);
+        xhttp.send();        
+  }
+
+  function onclickfunResetQueList(element)
+  {
+    var label = element.closest(".flex-container").getElementsByClassName("isactive");;
+    label[0].innerHTML="Uit"
+
+    var quelist =element.getAttribute("data-quelist");
+    xhttp.open("GET", "?MXM_RQL_" + quelist, false);
+    xhttp.send();        
+  }
+
+
+  function onSliderChangeIntensity(element)
+  {
+    var value=element.value;
+    var quelist =element.getAttribute("data-quelist");
+    var label = element.closest(".slidergroup").getElementsByClassName("label");
+    label[0].innerHTML = tekst + " " + value;
+    xhttp.open("GET", "?MXM_SQL_" + quelist + "_" + value, false);
+    xhttp.send();        
+  }
+</script>
+
+</html>
