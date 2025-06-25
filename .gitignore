@@ -18,6 +18,7 @@ dist-ssr
 **/bin
 **/bin/[dD]ebug
 **/bin/[rR[elease
+**/.vs
 
 
 # Editor directories and files

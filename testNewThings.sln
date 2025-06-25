@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstUnitTest", "MyFirstUnitTest\MyFirstUnitTest.csproj", "{668AB989-C999-4EAB-B5F7-4BC161602003}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationMinimaal", "WebApplicationMinimaal\WebApplicationMinimaal.csproj", "{FBD18966-7C81-4E08-975F-2BBF20FB36EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TodoApi\TodoApi.csproj", "{F51241AE-8D75-4845-A89C-31806438A9D0}"
