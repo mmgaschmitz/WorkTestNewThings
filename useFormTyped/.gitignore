@@ -12,23 +12,13 @@ dist
 dist-ssr
 *.local
 
-#.net
-**/obj
-**/obj/debug
-**/bin
-**/bin/[dD]ebug
-**/bin/[rR[elease
-**/.vs
-
-
 # Editor directories and files
-!.vscode/*
+.vscode/*
 !.vscode/extensions.json
-!.vscode/launch.json
 .idea
 .DS_Store
-!*.suo
+*.suo
 *.ntvs*
 *.njsproj
-!*.sln
+*.sln
 *.sw?
