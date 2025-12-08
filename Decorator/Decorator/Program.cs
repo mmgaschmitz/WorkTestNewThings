@@ -58,10 +58,10 @@ var serverInfoRetr = new ServerInfoRetriever();
 serverInfoRetr.GetInfo(IPAddress.Parse("127.0.0.1"));
 
 // met proxy.
-IEmailMessageSender emailSender = LoggingDecoratorProxyFactory.Create<IEmailMessageSender, EmailMessageSender>(new EmailMessageSender());
+IEmailMessageSender emailSender = LoggingDecoratorProxyFactory.Create<IEmailMessageSender, EmailMessageSender>(mailSender);
 emailSender.TrySendMessage("resulhsn@gmail.com", "Test", "Hi Rasul");
 
 Console.WriteLine("------------------------------------------------------------------------------------------");
 
-IServerInfoRetriever retriever = LoggingDecoratorProxyFactory.Create<IServerInfoRetriever, ServerInfoRetriever>(new ServerInfoRetriever());
+IServerInfoRetriever retriever = LoggingDecoratorProxyFactory.Create<IServerInfoRetriever, ServerInfoRetriever>(serverInfoRetr);
 retriever.GetInfo(IPAddress.Parse("127.0.0.1"));
